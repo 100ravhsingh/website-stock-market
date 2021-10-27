@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='Css/main.css')}}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="left_logo">
+                <div><img src="#" alt=""></div>
+                <h4>Logo Here</h4>
+            </div>
+            <div class="Center_Menu_bttn">
+                <ul>
+                    <li> <a href="/">Home</a> </li>
+                    <li> <a href="/aboutus">About Us</a> </li>
+                    <li> <a href="/course">Course</a> </li>
+                    <li> <a href="/financial_service" disabled tabindex="-1">Financial service</a> </li>
+                </ul>
+            </div>
+
+            <div class="right_socialmedia_bttn">
+                <a href="http:\\www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 25px; color: green;"></i></a>
+                <a href="www.instagram.com"> <i class="fa fa-instagram" aria-hidden="true" style="font-size: 25px; color: green;"></i> </a>
+                <a href="#"><i class="fa fa-telegram" aria-hidden="true" style="font-size: 25px; color: green;"></i></a>
+            </div>
+        </div>
+    </header>
+    {% block body %}   {% endblock %}
+
+    <footer>
+
+        <h1>
+            <center>&copy; 2020 Copyright: All Right Reserves</center>
+        </h1>
+
+    </footer>
+
+<script>
+    
+</script>
+
+</body>
+
+</html>

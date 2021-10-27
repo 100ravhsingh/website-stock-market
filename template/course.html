@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="{{url_for('static', filename='video/golden.mp4')}}" type="video/mp4">
+        </video>
+        <div class="welcome">
+            <h1>WELCOME TO <span> STOCK MARKET </span></h1>
+        </div>
+
+        <div class="center_part">
+    
+            <div class="quote">
+                <h1>Course</h1>
+                <h4>A course created by Anuj Singh.</h4>
+            </div>
+            
+        </div>
+        <div class="container1">
+            <div class="container1_right">
+                <h1>Get know about our course</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, facere aperiam! Cupiditate similique
+                    atque, sapiente magnam quasi vitae suscipit. Rerum inventore ut numquam exercitationem quasi tenetur
+                    amet dolorum, ab ullam quaerat! Dolore qui distinctio, odio repudiandae eius sunt repellat vel facilis
+                    ipsam officiis nobis, perspiciatis ipsa odit vero suscipit numquam? Reiciendis esse, sunt inventore
+                    doloremque, voluptates in quae modi neque, minus at pariatur! Velit natus placeat quae dolor amet,
+                </p>
+                <br>
+            </div>
+            
+        </div>
+
+    </div>
+
+    {% endblock %}

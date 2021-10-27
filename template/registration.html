@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="{{url_for('static', filename='video/golden.mp4')}}" type="video/mp4">
+        </video>
+        <h2 color="white">Open your demat account with us and get 50% discount on course</h2>
+
+        <div class="form2">
+            <h1>Registration</h1>
+            <form action="/" method="POST">
+                <div>
+                    <input type="text" name="fullname" id="fullname" placeholder="Enter your Fullname">
+                </div>
+                <div>
+                    <input type="text" name="fullname" id="email" placeholder="Enter your E-mail">
+                </div>
+                <div>
+                    <input type="text" name="fullname" id="mobile" placeholder="Enter your Mobile no.">
+                </div>
+                <div>
+                    <input type="text" name="fullname" id="password" placeholder="Enter your password">
+                </div>
+                <div>
+                    <input type="text" name="fullname" id="city" placeholder="Enter your city">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+            Already a member? <a href="/login" class="login"> Login here </a>
+
+        </div>
+    </div>
+
+    {% endblock %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="{{url_for('static', filename='video/golden.mp4')}}" type="video/mp4">
+        </video>
+        <div class="welcome">
+            <h1>WELCOME TO <span> STOCK MARKET </span></h1>
+        </div>
+
+
+    </div>
+{% endblock %}
