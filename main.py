@@ -28,8 +28,8 @@ def login():
 @app.route('/login_validation', methods=['POST'])
 def login_validation():
     # data receive from here
-    email= request.form.get('hemail')
-    password= request.form.get('hpassword')
+    email = request.form.get('hemail')
+    password = request.form.get('hpassword')
     return "the email is {} and the password is {}".format(email, password)
 
 
