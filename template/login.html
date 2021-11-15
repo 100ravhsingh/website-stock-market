@@ -8,14 +8,14 @@
 
         <div class="form2">
             <h1> Login</h1>
-            <form action="/login_validation" method="post">
+            <form action="/login_validation" name="myForm" onsubmit="return(validate());" method="post">
             
                 <div>
-                    <input type="text" name="hemail" id="email" placeholder="Enter your E-mail">
+                    <input type="email" name="fullemail" id="email" placeholder="Enter your E-mail">
                 </div>
                 
                 <div>
-                    <input type="text" name="hpassword" id="password" placeholder="Enter your password">
+                    <input type="password" name="fullpassword" id="password" placeholder="Enter your password">
                 </div>
                
                 <div>

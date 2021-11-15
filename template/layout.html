@@ -15,7 +15,7 @@
         <div class="navbar">
             <div class="left_logo">
                 <div><img src="#" alt=""></div>
-                <h4>Logo Here</h4>
+                <h4>Stock App</h4>
             </div>
             <div class="Center_Menu_bttn">
                 <ul>
@@ -27,15 +27,17 @@
             </div>
 
             <div class="right_socialmedia_bttn">
-                <a href="http:\\www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true" style="font-size: 25px; color: green;"></i></a>
-                <a href="www.instagram.com"> <i class="fa fa-instagram" aria-hidden="true" style="font-size: 25px; color: green;"></i> </a>
+                <a href="http:\\www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"
+                        style="font-size: 25px; color: green;"></i></a>
+                <a href="www.instagram.com"> <i class="fa fa-instagram" aria-hidden="true"
+                        style="font-size: 25px; color: green;"></i> </a>
                 <a href="#"><i class="fa fa-telegram" aria-hidden="true" style="font-size: 25px; color: green;"></i></a>
             </div>
         </div>
     </header>
-    {% block body %}   {% endblock %}
+    {% block body %} {% endblock %}
 
-    <footer>
+    <footer class="footer">
 
         <h1>
             <center>&copy; 2020 Copyright: All Right Reserves</center>
@@ -43,9 +45,52 @@
 
     </footer>
 
-<script>
-    
-</script>
+    <script>
+    // FORM VALIDATION (Registraion & login)
+
+function validate() 
+        {
+            if( document.myForm.fullname.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.fullname.focus() ;
+            return false;
+         }
+         if( document.myForm.fullemail.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.fullemail.focus() ;
+            return false;
+         }
+         if( document.myForm.fullpassword.value == "") {
+            alert( "Please provide a password in the format #####." );
+            document.myForm.fullpassword.focus() ;
+            return false;
+         }
+         if( document.myForm.fullcity.value == "" ) {
+            alert( "Please provide your country!" );
+            document.myForm.fullcity.focus() ;
+            return false;
+         }
+         if( document.myForm.fullnumber.value == "" ) {
+            alert( "Please provide your country!" );
+            document.myForm.fullnumber.focus() ;
+            return false;
+         }
+         return( true );
+        }
+
+        function validatefullemail() {
+         var emailID = document.myForm.fullemail.value;
+         atpos = emailID.indexOf("@");
+         dotpos = emailID.lastIndexOf(".");
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            document.myForm.fullemail.focus() ;
+            return false;
+         }
+         return( true );
+      }
+    </script>
 
 </body>
 

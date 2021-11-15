@@ -9,24 +9,24 @@
 
         <div class="form2">
             <h1>Registration</h1>
-            <form action="/" method="POST">
+            <form name="myForm" action="/add_user" onsubmit="return(validate());" method="post">
                 <div>
-                    <input type="text" name="fullname" id="fullname" placeholder="Enter your Fullname">
+                    <input type="text" name="fullname" id="fname" placeholder="Enter your Fullname">
                 </div>
                 <div>
-                    <input type="text" name="fullname" id="email" placeholder="Enter your E-mail">
+                    <input type="email" name="fullemail" id="email" placeholder="Enter your E-mail">
                 </div>
                 <div>
-                    <input type="text" name="fullname" id="mobile" placeholder="Enter your Mobile no.">
+                    <input type="text" name="fullnumber" id="mobile" placeholder="Enter your Mobile no.">
                 </div>
                 <div>
-                    <input type="text" name="fullname" id="password" placeholder="Enter your password">
+                    <input type="password" name="fullpassword" id="password" placeholder="Enter your password">
                 </div>
                 <div>
-                    <input type="text" name="fullname" id="city" placeholder="Enter your city">
+                    <input type="text" name="fullcity" id="city" placeholder="Enter your city">
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" value="Submit">Submit</button>
                 </div>
             </form>
             Already a member? <a href="/login" class="login"> Login here </a>
