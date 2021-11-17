@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request, redirect, session
-# import os
+import os
 import mysql.connector
 
 app = Flask(__name__, template_folder='template')
-# app.secret_key=os.urandom(24) # session set 24 character key
+app.secret_key = os.urandom(24)  # session set 24 character key
 
 # connect to sql
 conn = mysql.connector.connect(host="remotemysql.com", user="YaEpvwldhp", password="An8ukY1faE", database="YaEpvwldhp")
@@ -11,7 +11,10 @@ conn = mysql.connector.connect(host="remotemysql.com", user="YaEpvwldhp", passwo
 cursor = conn.cursor()
 @app.route('/')
 def home():
-    return render_template("index.html")
+    if 'Id' in session:
+        return render_template("dashboard.html")
+    else:
+        return render_template("index.html")
 @app.route('/aboutus')
 def about():
     return render_template("aboutus.html")
@@ -45,7 +48,8 @@ def login_validation():
     cursor.execute("""SELECT * FROM `stockdb` WHERE
      `Email` = '{}' AND `Password` = '{}'""".format(email, password))
     stockdb = cursor.fetchall()
-    if len(stockdb)>0:
+    if len(stockdb) > 0:
+        session['Id'] = stockdb[0][0]
         return redirect('/dashboard')
     else:
         return redirect('/login')
@@ -61,7 +65,14 @@ def add_user():
     cursor.execute("""INSERT INTO `stockdb` (`Id`, `Name`, `Email`, `Number`, `Password`, `City`) 
     VALUES (NULL, '{}', '{}', '{}', '{}', '{}')""".format(name,email,mob_number,password,city_name))
     conn.commit()
-    return "User registered successfully"
+    return "User registered successfully. Go back to login page"
+
+@app.route('/logout')
+def logout():
+    session.pop('Id')
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
